@@ -1,0 +1,12 @@
+img{
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+}
+button {
+    margin-right: 10px; /* Add margin to the right of each button */
+}
+
+  .item-with-button button {
+    margin-left: 10px; /* Adjust the margin as needed for spacing between item and button */
+  }

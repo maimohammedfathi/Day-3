@@ -1,0 +1,42 @@
+<h2>Structural Directives</h2>
+show <input type="checkbox" name="ShowDiv" [(ngModel)]="show" >
+<div *ngIf="show" class="text-center  p-2 bg-primary text-light">
+    <h1>welcome</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Earum voluptates odit animi, quam omnis neque. Soluta optio unde enim tempora,
+    nisi facere modi porro vitae facilis, possimus animi quasi quis.</p>
+</div>
+
+<h3>ngIf else</h3>
+Are You Ready? <input type="checkbox" name="ready" [(ngModel)]="ready">
+
+<div *ngIf="ready ; else ourElse" class="bg-success">Yes</div>
+
+<ng-template #ourElse>
+    <div class="bg-danger">No</div> 
+</ng-template>
+
+
+
+<h3>ng for</h3>
+<div class="row">
+    <div class="col-3 bg-light m-1" *ngFor="let item of products let i = index">
+        <h5>{{i+1}} title {{item.type}}</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+</div>
+
+<h3>ng switch</h3>
+
+<select name="sc" [(ngModel)]="color">
+<option value="red">Red</option>
+<option value="green">green</option>
+<option value="blue">blue</option> 
+<option value="">none</option>
+</select>
+<div [ngSwitch]="color">
+    <p *ngSwitchCase="'red'" class="bg-danger">Red</p>
+    <p *ngSwitchCase="'green'" class="bg-success">green</p>
+    <p *ngSwitchCase="'blue'" class="bg-primary">blue</p>
+    <p *ngSwitchDefault="" class="bg-dark text-light">none</p> 
+</div>

@@ -1,0 +1,16 @@
+<hr>
+<p>Pass primitive data</p>
+<button class="btn btn-warning" (click)="printMsg('tasneem')">Hello</button>
+<hr>
+<h4>pass element using ref</h4>
+<p #myRef>Click btn to change me</p>
+<button class="btn btn-warning" (click)="printMsgP(myRef)">Change P</button>
+<hr>
+<p>Pass event Args</p>
+<button class="btn btn-warning" (click)="printMsgBtn($event)">Get this btn info</button>
+<hr>
+<h4>View child</h4>
+<div #divViewChild>
+<p>test view child</p>
+</div>
+<button class="btn btn-warning" (click)="printViewChild()">Get view child info</button>
